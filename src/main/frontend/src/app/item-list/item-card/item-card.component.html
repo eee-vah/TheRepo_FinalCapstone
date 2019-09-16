@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <img src="{{ item.itemImageUrl }}" class="card-img-top" alt="Product image" height="270">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.description }}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{ item.price | currency }}</li>
+                <li class="list-group-item">{{ item.category }}</li>
+                <li class="list-group-item">Available: {{ item.quantity }}</li>
+            </ul>
+            <div class="card-body">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <input [(ngModel)]="quantityToPurchase" type="number" class="form-control" placeholder="Qty" [max]="item.quantity">
+                    <button type="button" class="btn btn-outline-dark" [class.disabled]="quantityToPurchase > item.quantity" (click)="onAddToCart(item, quantity)">{{ buttonText }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

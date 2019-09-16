@@ -1,0 +1,31 @@
+*{
+    font-family: 'didact gothic';
+    font-weight: bold;
+}
+img{
+    height: 80px;
+}
+.table{
+    float: left;
+    width: 75%;
+    margin: 0px 10px 10px 10px;
+}
+th{
+    font-weight: bold;
+}
+#deleteButton{
+    text-decoration: underline;
+    color: darkblue;
+}
+.card{
+    float: right;
+    width: 25%;
+    margin: 10px;
+}
+.receipt{
+    width:90%;
+    margin: 20px;
+}
+.cartText{
+    margin: 20px;
+}
